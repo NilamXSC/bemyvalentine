@@ -191,7 +191,7 @@ const FinalReveal = () => {
         className="text-center space-y-3 sm:space-y-4 pt-2"
       >
         <p className="text-sm sm:text-base text-foreground font-medium px-4">
-          Be sure to show me this card on 14th babe, Go. 💝
+          Show me this card on 14th babe. 💝
         </p>
         
         <motion.button
