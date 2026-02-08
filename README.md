@@ -1,73 +1,151 @@
-Be My Valentine!
+## 💖 Valentine App
+Welcome
+Create Your Perfect Valentine Experience
 
-## Project info
+A playful, romantic, and emotionally alive web experience designed to help you pop the big question and plan a dream date together.
+This app turns a simple “Will you be my Valentine?” into a memorable journey, filled with personality, animations, music, and love — personalized just for you and your special someone.
 
-**URL**: n
+## 🌸 What Is This App?
 
-## How can I edit this code?
+The Valentine App is an interactive, mobile-first web application where buttons have emotions, backgrounds react to moments, and love is expressed through playful interactions.
+It’s not just a question — it’s an experience.
 
-There are several ways of editing your application.
+## 🚀 Get Started
 
-**Use Lovable**
+Open the app, let the music play, and let the story unfold.
+Everything is designed to feel natural, romantic, and fun from the very first second.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## ✨ What’s Inside
+💌 Ask the Question
 
-Changes made via Lovable will be committed automatically to this repo.
+A beautifully designed glassmorphic card presents the big question:
+“Will you be my Valentine?”
+Simple, elegant, and emotionally engaging.
 
-**Use your preferred IDE**
+😈 Chase the No
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The No button has a mind of its own:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Runs away playfully
 
-Follow these steps:
+Teases with funny messages
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Expresses panic and mischief
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Escapes beyond the card while staying on-screen
 
-# Step 3: Install the necessary dependencies.
-npm i
+Meanwhile, the Yes button watches and laughs, tracking movements like a tiny character cheering you on.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+💖 Plan Your Date
 
-**Edit a file directly in GitHub**
+Once she says Yes, the experience continues:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Choose the date vibe
 
-**Use GitHub Codespaces**
+Select activities together
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Personalize how the day should feel
+Every choice updates visuals and emotions in real time.
 
-## What technologies are used for this project?
+💬 Sweet Messages
 
-This project is built with:
+Leave heartfelt notes and personal messages for each other.
+Small words, big emotions.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+🧸 Personalized
 
-## How can I deploy this project?
+Names & nicknames can be customized
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Inside jokes can be added
 
-## Can I connect a custom domain to my Lovable project?
+GIFs can be swapped per section
+Every experience feels unique and personal.
 
-Yes, you can!
+💾 Save & Share
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Create and download a Valentine Card based on your choices — a keepsake to remember the moment.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+🎶 Romantic Tunes
+
+A built-in background music player:
+
+Soft romantic tracks
+
+Auto-play on load
+
+Enhances the emotional ambiance
+
+🌟 Experience Highlights
+💞 Interactive Experience
+
+A playful, romantic journey designed to make her smile, laugh, and feel special.
+
+🎨 Beautiful Animations
+
+Smooth transitions
+
+Floating hearts & love symbols
+
+Confetti celebrations on Yes
+All animations are subtle and focused on emotion, never distraction.
+
+💎 Personalized Card
+
+Your final Valentine card reflects:
+
+Your choices
+
+Your vibe
+
+Your love
+
+🌙 Romantic Ambiance
+
+Music, motion, and mood combine to create a warm, immersive experience.
+
+📝 Leave Sweet Notes
+
+Write messages straight from the heart — simple, intimate, and meaningful.
+
+🧭 How It Works
+1️⃣ The Question
+
+A glassmorphic card appears with the big question.
+The Yes button is inviting.
+The No button… not so cooperative.
+
+2️⃣ The Chase
+
+Try clicking No — if you can.
+The button escapes, talks back, panics, and jokes.
+The Yes button watches, laughs, and waits.
+
+3️⃣ The Plan
+
+Once Yes is clicked:
+
+Background emotions shift to love
+
+Confetti and hearts celebrate
+
+Date planning begins
+
+4️⃣ The Card
+
+A final Valentine card is created from your choices — a perfect ending to a perfect moment.
+
+🎭 Experience Modes
+
+Choose how the experience feels:
+
+Romantic Mode
+Soft, dreamy, and emotional
+
+Playful Mode
+Fun, teasing, and interactive
+
+Party Mode
+Celebrations, confetti, and energy
+
+Cozy Mode
+Warm, calm, and intimate
