@@ -25,7 +25,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [isSharedExperience, setIsSharedExperience] = useState(false);
 
   useEffect(() => {
-    // Check if this is a shared experience URL
+    // Check if this is an shared experience URL
     const isShared = window.location.pathname.startsWith('/v/');
     setIsSharedExperience(isShared);
     
