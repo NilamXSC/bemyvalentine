@@ -39,7 +39,7 @@ const DateSelection = ({ onComplete }: DateSelectionProps) => {
     message: '',
   });
   
-  const herNickname = user?.herNickname || 'Sweetheart';
+  const youCallPartner = user?.youCallPartner || 'Sweetheart';
 
   const handleVibeSelect = (vibe: string) => {
     setSelections((prev) => ({ ...prev, vibe }));
@@ -69,7 +69,7 @@ const DateSelection = ({ onComplete }: DateSelectionProps) => {
             className="space-y-4"
           >
             <h3 className="font-serif text-xl text-center text-foreground flex items-center justify-center gap-2">
-              What's the vibe, {herNickname}? <Heart className="w-5 h-5 text-primary" />
+              What's the vibe, {youCallPartner}? <Heart className="w-5 h-5 text-primary" />
             </h3>
             <div className="grid grid-cols-2 gap-3">
               {vibeOptions.map((option) => {
@@ -157,7 +157,6 @@ const DateSelection = ({ onComplete }: DateSelectionProps) => {
         )}
       </AnimatePresence>
 
-      {/* Progress dots */}
       <div className="flex justify-center gap-2 pt-2">
         {[1, 2, 3].map((s) => (
           <div
