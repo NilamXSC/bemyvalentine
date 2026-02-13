@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export interface UserData {
-  hisName: string;
-  herName: string;
-  hisNickname: string;
-  herNickname: string;
+  yourName: string;
+  partnerName: string;
+  partnerCallsYou: string;
+  youCallPartner: string;
   isLoggedIn: boolean;
 }
 
@@ -25,7 +25,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [isSharedExperience, setIsSharedExperience] = useState(false);
 
   useEffect(() => {
-    // Check if this is an shared experience URL
+    // Check if this is a shared experience URL
     const isShared = window.location.pathname.startsWith('/v/');
     setIsSharedExperience(isShared);
     
@@ -58,7 +58,16 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, isLoading, login, logout, setSharedUser, isSharedExperience }}>
+    <UserContext.Provider
+      value={{
+        user,
+        isLoading,
+        login,
+        logout,
+        setSharedUser,
+        isSharedExperience,
+      }}
+    >
       {children}
     </UserContext.Provider>
   );
