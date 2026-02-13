@@ -23,7 +23,7 @@ const ValentineCard = ({ onEmotionChange }: ValentineCardProps) => {
   const [isNoBeingChased, setIsNoBeingChased] = useState(false);
   const [showDefeatedNo, setShowDefeatedNo] = useState(false);
   
-  const herNickname = user?.herNickname || 'Sweetheart';
+  const youCallPartner = user?.youCallPartner || 'Sweetheart';
 
   const handleYesClick = () => {
     setShowConfetti(true);
@@ -40,7 +40,6 @@ const ValentineCard = ({ onEmotionChange }: ValentineCardProps) => {
     setIsNoBeingChased(true);
     onEmotionChange('playful');
     
-    // Reset chase state after a moment
     setTimeout(() => {
       setIsNoBeingChased(false);
       if (stage === 'intro') {
@@ -62,7 +61,6 @@ const ValentineCard = ({ onEmotionChange }: ValentineCardProps) => {
     <>
       {showConfetti && <ConfettiBurst />}
       
-      {/* Panicky NO button - rendered outside the card for screen-wide movement */}
       {stage === 'intro' && (
         <PanickyNoButton 
           onEscape={handleNoEscape}
@@ -70,7 +68,6 @@ const ValentineCard = ({ onEmotionChange }: ValentineCardProps) => {
         />
       )}
 
-      
       <motion.div
         className="glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 w-full max-w-sm sm:max-w-md mx-3 sm:mx-4 relative z-10"
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -85,6 +82,7 @@ const ValentineCard = ({ onEmotionChange }: ValentineCardProps) => {
         }}
       >
         <AnimatePresence mode="wait">
+
           {/* INTRO STAGE */}
           {stage === 'intro' && (
             <motion.div
@@ -117,7 +115,6 @@ const ValentineCard = ({ onEmotionChange }: ValentineCardProps) => {
                   noChaseCount={escapeCount}
                 />
 
-                {/* Spacer for NO button */}
                 <div className="h-16" />
               </div>
             </motion.div>
@@ -149,7 +146,7 @@ const ValentineCard = ({ onEmotionChange }: ValentineCardProps) => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
               >
-                Now tell me how you want our special day to be, {herNickname}...
+                Now tell me how you want our special day to be, {youCallPartner}...
               </motion.p>
 
               <motion.button
