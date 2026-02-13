@@ -22,10 +22,10 @@ const OnboardingModal = ({ open, onComplete }: OnboardingModalProps) => {
   const { login } = useUser();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    hisName: '',
-    herName: '',
-    hisNickname: '',
-    herNickname: '',
+    yourName: '',
+    partnerName: '',
+    partnerCallsYou: '',
+    youCallPartner: '',
   });
 
   const handleNext = () => {
@@ -37,8 +37,8 @@ const OnboardingModal = ({ open, onComplete }: OnboardingModalProps) => {
     }
   };
 
-  const isStep1Valid = formData.hisName.trim() && formData.herName.trim();
-  const isStep2Valid = formData.hisNickname.trim() && formData.herNickname.trim();
+  const isStep1Valid = formData.yourName.trim() && formData.partnerName.trim();
+  const isStep2Valid = formData.partnerCallsYou.trim() && formData.youCallPartner.trim();
 
   return (
     <Dialog open={open}>
@@ -81,32 +81,32 @@ const OnboardingModal = ({ open, onComplete }: OnboardingModalProps) => {
                 className="space-y-4"
               >
                 <div className="space-y-2">
-                  <Label htmlFor="hisName" className="flex items-center gap-2 text-foreground">
+                  <Label htmlFor="yourName" className="flex items-center gap-2 text-foreground">
                     <User className="w-4 h-4 text-blue-400" />
-                    Your Name (Him)
+                    Your Name
                   </Label>
                   <Input
-                    id="hisName"
+                    id="yourName"
                     placeholder="Enter your name..."
-                    value={formData.hisName}
+                    value={formData.yourName}
                     onChange={(e) =>
-                      setFormData((prev) => ({ ...prev, hisName: e.target.value }))
+                      setFormData((prev) => ({ ...prev, yourName: e.target.value }))
                     }
                     className="bg-white/50 border-rose-200 focus:border-primary"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="herName" className="flex items-center gap-2 text-foreground">
+                  <Label htmlFor="partnerName" className="flex items-center gap-2 text-foreground">
                     <UserRound className="w-4 h-4 text-pink-400" />
-                    Her Name
+                    Your Partner's Name
                   </Label>
                   <Input
-                    id="herName"
-                    placeholder="Enter her name..."
-                    value={formData.herName}
+                    id="partnerName"
+                    placeholder="Enter your partner's name..."
+                    value={formData.partnerName}
                     onChange={(e) =>
-                      setFormData((prev) => ({ ...prev, herName: e.target.value }))
+                      setFormData((prev) => ({ ...prev, partnerName: e.target.value }))
                     }
                     className="bg-white/50 border-rose-200 focus:border-primary"
                   />
@@ -123,32 +123,32 @@ const OnboardingModal = ({ open, onComplete }: OnboardingModalProps) => {
                 className="space-y-4"
               >
                 <div className="space-y-2">
-                  <Label htmlFor="hisNickname" className="flex items-center gap-2 text-foreground">
+                  <Label htmlFor="partnerCallsYou" className="flex items-center gap-2 text-foreground">
                     <Sparkles className="w-4 h-4 text-amber-400" />
-                    Your Nickname (What she calls you)
+                    What Does Your Partner Call You?
                   </Label>
                   <Input
-                    id="hisNickname"
+                    id="partnerCallsYou"
                     placeholder="e.g., Baby, Boo, Love..."
-                    value={formData.hisNickname}
+                    value={formData.partnerCallsYou}
                     onChange={(e) =>
-                      setFormData((prev) => ({ ...prev, hisNickname: e.target.value }))
+                      setFormData((prev) => ({ ...prev, partnerCallsYou: e.target.value }))
                     }
                     className="bg-white/50 border-rose-200 focus:border-primary"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="herNickname" className="flex items-center gap-2 text-foreground">
+                  <Label htmlFor="youCallPartner" className="flex items-center gap-2 text-foreground">
                     <Heart className="w-4 h-4 text-rose-400" />
-                    Her Nickname (What you call her)
+                    What Do You Call Your Partner?
                   </Label>
                   <Input
-                    id="herNickname"
+                    id="youCallPartner"
                     placeholder="e.g., Sweetheart, Babe, Cutie..."
-                    value={formData.herNickname}
+                    value={formData.youCallPartner}
                     onChange={(e) =>
-                      setFormData((prev) => ({ ...prev, herNickname: e.target.value }))
+                      setFormData((prev) => ({ ...prev, youCallPartner: e.target.value }))
                     }
                     className="bg-white/50 border-rose-200 focus:border-primary"
                   />
