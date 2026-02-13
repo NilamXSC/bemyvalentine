@@ -33,8 +33,8 @@ const FinalReveal = () => {
   const [selections, setSelections] = useState<DateSelections | null>(null);
   const [isDownloading, setIsDownloading] = useState(false);
   
-  const herName = user?.herName || 'My Love';
-  const hisNickname = user?.hisNickname || 'Yours';
+  const partnerName = user?.partnerName || 'My Love';
+  const partnerCallsYou = user?.partnerCallsYou || 'Yours';
 
   useEffect(() => {
     const saved = localStorage.getItem('valentineSelections');
@@ -55,7 +55,7 @@ const FinalReveal = () => {
       });
       
       const link = document.createElement('a');
-      link.download = `valentines-card-for-${herName.toLowerCase().replace(/\s+/g, '-')}.png`;
+      link.download = `valentines-card-for-${partnerName.toLowerCase().replace(/\s+/g, '-')}.png`;
       link.href = canvas.toDataURL('image/png');
       link.click();
     } catch (error) {
@@ -128,7 +128,7 @@ const FinalReveal = () => {
 
             {selections.message && (
               <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-white/50 rounded-xl">
-                <p className="text-xs sm:text-sm text-muted-foreground mb-1">{herName}'s Note:</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mb-1">{partnerName}'s Note:</p>
                 <p className="text-sm sm:text-base text-foreground italic">"{selections.message}"</p>
               </div>
             )}
@@ -143,7 +143,7 @@ const FinalReveal = () => {
           className="pt-3 sm:pt-4"
         >
           <p className="font-serif italic text-base sm:text-lg text-muted-foreground">
-            — {hisNickname} 💖
+            — {partnerCallsYou} 💖
           </p>
         </motion.div>
 
