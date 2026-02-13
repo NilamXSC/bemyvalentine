@@ -27,10 +27,10 @@ const ShareLinkModal = ({ open, onClose }: ShareLinkModalProps) => {
     if (user && open) {
       const link = generateShareLink(
         {
-          hisName: user.hisName,
-          herName: user.herName,
-          hisNickname: user.hisNickname,
-          herNickname: user.herNickname,
+          yourName: user.yourName,
+          partnerName: user.partnerName,
+          partnerCallsYou: user.partnerCallsYou,
+          youCallPartner: user.youCallPartner,
         },
         window.location.origin
       );
@@ -44,7 +44,6 @@ const ShareLinkModal = ({ open, onClose }: ShareLinkModalProps) => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      // Fallback for older browsers
       const textArea = document.createElement('textarea');
       textArea.value = shareLink;
       document.body.appendChild(textArea);
@@ -58,7 +57,7 @@ const ShareLinkModal = ({ open, onClose }: ShareLinkModalProps) => {
 
   const handleWhatsAppShare = () => {
     const message = encodeURIComponent(
-      `Hey ${user?.herName || 'babe'}! 💖 I made something special for you... Click this link to see! ${shareLink}`
+      `Hey ${user?.partnerName || 'love'}! 💖 I made something special for you... Click this link to see! ${shareLink}`
     );
     window.open(`https://wa.me/?text=${message}`, '_blank');
   };
@@ -73,7 +72,7 @@ const ShareLinkModal = ({ open, onClose }: ShareLinkModalProps) => {
             <Sparkles className="w-5 h-5 text-primary" />
           </DialogTitle>
           <DialogDescription className="text-center text-muted-foreground">
-            Send this magical link to {user?.herName || 'your special someone'} 💕
+            Send this magical link to {user?.partnerName || 'your special someone'} 💕
           </DialogDescription>
         </DialogHeader>
 
