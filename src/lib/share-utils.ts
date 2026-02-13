@@ -1,12 +1,10 @@
 // Utility functions for generating and parsing shareable Valentine links
 
-import { UserData } from '@/contexts/UserContext';
-
 export interface ShareableData {
-  hisName: string;
-  herName: string;
-  hisNickname: string;
-  herNickname: string;
+  yourName: string;
+  partnerName: string;
+  partnerCallsYou: string;
+  youCallPartner: string;
 }
 
 /**
@@ -26,10 +24,12 @@ export function decodeShareData(encoded: string): ShareableData | null {
   try {
     // Restore standard base64 characters
     let base64 = encoded.replace(/-/g, '+').replace(/_/g, '/');
+
     // Add padding if needed
     while (base64.length % 4) {
       base64 += '=';
     }
+
     const json = decodeURIComponent(escape(atob(base64)));
     return JSON.parse(json);
   } catch (error) {
